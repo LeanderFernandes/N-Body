@@ -3,6 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import time
+import sys
 
 def initialise(n):
     xyzs = np.random.randint(-10,10,size=(n,3))*10E12
@@ -85,7 +86,7 @@ def time_step(position, velocity, acceleration, dt):
     
     return new_position, new_velocity
     
-def main():
+def main(steps):
     _initialisation_start = time.time()
 
     #Any global parameters
@@ -101,13 +102,11 @@ def main():
 
     stored_positions = []
 
-    total_time = 1000
-
     _initialisation_end = time.time()
 
     _simulation_start = time.time()
 
-    for i in range(total_time):
+    for i in range(steps):
 
         for j in range(len(pos_array)):
             #Calculate the total acceleration 
