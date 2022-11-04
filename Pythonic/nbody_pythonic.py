@@ -95,18 +95,18 @@ def info(iterations, time_per_step, init_time, sim_time):
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
 
-def main(steps):
+def main(steps,years):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = time.time()
 
     #Any global parameters within main()
-    TIMESTEP = 60*60*24*10         #time step in seconds
+    TIMESTEP = 60*60*24*365.25*years        #time step in seconds
     G = 6.6743E-11                 #Gravitational Constant  
-    TOTAL_BODIES = 100
+    TOTAL_BODIES = 5
 
     #Choose whioch state to INITIALISE
-    pos_array, vel_array, mass_array = initialise_solar_system()
-    # pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
+    # pos_array, vel_array, mass_array = initialise_solar_system()
+    pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
 
     #Setup variables for the simulation
     simulation_positions = pos_array
@@ -151,9 +151,9 @@ def main(steps):
 
 #Arg passing for easier testing
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        main(int(sys.argv[1]))
+    if len(sys.argv) == 3:
+        main(int(sys.argv[1]), int(sys.argv[2]))
     else:
-        print("Usage: Python {} <ITERATIONS>".format(sys.argv[0]))
+        print("Usage: Python {} <ITERATIONS> <YEARS PER ITERATION>".format(sys.argv[0]))
 
 
