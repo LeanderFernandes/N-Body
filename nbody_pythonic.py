@@ -91,63 +91,66 @@ def time_step(position, velocity, acceleration, dt):
 def info(iterations, time_per_step, init_time, sim_time):
     print("\n**********************************\n")
     print(f"This simulation runs for {iterations} iterations in steps of {time_per_step} seconds")
-    print(f"Total simulation time is {iterations*time_per_step}s")
+    print(f"Total simulation time is {iterations*time_per_step/(60*60*24*365.25)}yrs")
     print("\n**********************************\n")  
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
 
 def main(steps):
+    #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = time.time()
 
-    #Any global parameters
+    #Any global parameters within main()
     TIMESTEP = 60*60*24*10         #time step in seconds
-    G = 6.6743E-11          #Gravitational Constant  
-    TOTAL_BODIES = 10
+    G = 6.6743E-11                 #Gravitational Constant  
+    TOTAL_BODIES = 100
 
+    #Choose whioch state to INITIALISE
     pos_array, vel_array, mass_array = initialise_solar_system()
-    #pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
+    # pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
 
+    #Setup variables for the simulation
     simulation_positions = pos_array
     simulation_velocities = vel_array
-
     stored_positions = []
 
     _initialisation_end = time.time()
-
     _simulation_start = time.time()
 
+    #time step through the simulation
     for i in range(steps):
+        #Keep track of GPE and KE each time step
         KE = 0
         GPE = 0
+        #Runs through each body
         for j in range(len(pos_array)):
             #Calculate the total acceleration 
             acc_vector = get_total_acceleration_v2(simulation_positions[j], pos_array, mass_array, G)
-            
-            #Update position, vels
+            #Update position and velocities
             new_pos, new_vel = time_step(simulation_positions[j], simulation_velocities[j], acc_vector, TIMESTEP)
-            
+            #Holds the new positions
             simulation_positions[j] = new_pos
             simulation_velocities[j] = new_vel
-            
+            #Finds the KE and GPE of the new state and then stores it
             KE_temp, GPE_temp = get_Energy(new_vel, mass_array[j], simulation_positions[j], pos_array, mass_array, G)
             KE += KE_temp
             GPE += GPE_temp
             
-        print(KE+GPE)
-        #Store every x timestep
+        #Store every x time steps to an array
         if i%1 == 0:
             stored_positions.append(simulation_positions.copy())
 
+    #Runs an information function that writes data cleanly
     _simulation_end = time.time()
-
+    print(_initialisation_end - _initialisation_start, _initialisation_start, _initialisation_end)
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
     info(steps, TIMESTEP, initialisation_time, simulation_time)
     
-    #Save inputs to numpy file
+    #Save stroed positions to numpy file
     np.save("nbody_positions", stored_positions)
 
-
+#Arg passing for easier testing
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         main(int(sys.argv[1]))
