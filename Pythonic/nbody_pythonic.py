@@ -1,7 +1,7 @@
 
 #Bring in all libraries
 import numpy as np
-import time
+from time import perf_counter
 import sys
 
 def initialise(n):
@@ -115,7 +115,7 @@ def info(iterations, time_per_step, init_time, sim_time):
 
 def main(steps,days):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
-    _initialisation_start = time.time()
+    _initialisation_start = perf_counter()
 
     #Any global parameters within main()
     TIMESTEP = 60*60*24*days        #time step in seconds
@@ -133,8 +133,8 @@ def main(steps,days):
     stored_positions = []
     stored_energy = []
 
-    _initialisation_end = time.time()
-    _simulation_start = time.time()
+    _initialisation_end = perf_counter()
+    _simulation_start = perf_counter()
 
     #time step through the simulation
     for i in range(steps):
@@ -161,7 +161,7 @@ def main(steps,days):
             stored_energy.append([KE,GPE,KE+GPE].copy())
 
     #Runs an information function that writes data cleanly
-    _simulation_end = time.time()
+    _simulation_end = perf_counter()
     print(_initialisation_end - _initialisation_start, _initialisation_start, _initialisation_end)
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
