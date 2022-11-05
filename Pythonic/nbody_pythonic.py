@@ -11,7 +11,25 @@ def initialise(n):
     mass = np.random.randint(1, 10, size=(n))*10E30
     return xyzs, vels, mass
     
+def initialise_sun_earth():
+    #create solar system dict with x_pos, y_vel, mass
+    solar_system_info = {'sun': [0, 0, 1.989E30],
+                         'earth': [148.88E9, 29.8E3, 5.972E24],
+                         }
+    #Puts solar system 
+    xyz = []
+    vels = []
+    mass = []
+    for i in solar_system_info:
+        temp_pos = [solar_system_info[i][0], 0, 0]
+        temp_vel = [0, solar_system_info[i][1], 0]
+        temp_mass = solar_system_info[i][2]
+        
+        xyz.append(temp_pos)
+        vels.append(temp_vel)
+        mass.append(temp_mass)
 
+    return np.asarray(xyz),np.asarray(vels),np.asarray(mass)
 def initialise_solar_system():
     #create solar system dict with x_pos, y_vel, mass
     solar_system_info = {'sun': [0, 0, 1.989E30],
@@ -73,9 +91,9 @@ def get_Energy(velocity, mass, body_position, all_positions, masses, G):
     #finds the GPE for each body then sums up
     for i, position in enumerate(all_positions):
         r = body_position - position
-        r_t = np.sqrt(r[0]**2 + r[1]**2 + r[2]**2+softening_factor)
-        GPE += 0.5*G*masses[i]*mass/(r_t)
-
+        radius = np.sqrt(r[0]**2 + r[1]**2 + r[2]**2)
+        if radius > 0:
+            GPE += 0.5*G*masses[i]*mass/(radius)
     return KE, GPE
 
 #Takes acc vector and timesteps, returning new position, new velocity
@@ -107,11 +125,13 @@ def main(steps,days):
     #Choose whioch state to INITIALISE
     pos_array, vel_array, mass_array = initialise_solar_system()
     # pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
-
+    # pos_array, vel_array, mass_array = initialise_sun_earth()
+    
     #Setup variables for the simulation
     simulation_positions = pos_array
     simulation_velocities = vel_array
     stored_positions = []
+    stored_energy = []
 
     _initialisation_end = time.time()
     _simulation_start = time.time()
@@ -138,6 +158,7 @@ def main(steps,days):
         #Store every x time steps to an array
         if i%10 == 0:
             stored_positions.append(simulation_positions.copy())
+            stored_energy.append([KE,GPE,KE+GPE].copy())
 
     #Runs an information function that writes data cleanly
     _simulation_end = time.time()
@@ -148,6 +169,7 @@ def main(steps,days):
     
     #Save stroed positions to numpy file
     np.save("nbody_positions", stored_positions)
+    np.save("nbody_energies", stored_energy)
 
 #Arg passing for easier testing
 if __name__ == "__main__":
@@ -157,3 +179,4 @@ if __name__ == "__main__":
         print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION>".format(sys.argv[0]))
 
 
+"""For Solar system set Days Per Iteration to 1"""
