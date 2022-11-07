@@ -4,7 +4,7 @@ import numpy as np
 import sys
 
 from time import perf_counter
-from cython.parallel cimport prange
+#from cython.parallel cimport prange
 
 
 def initialise(n):
@@ -145,7 +145,7 @@ def main(steps,days):
         KE = 0
         GPE = 0
         #Runs through each body
-        for j in range(len(pos_array), nogil=True):
+        for j in range(len(pos_array)):
             #Calculate the total acceleration 
             acc_vector = get_total_acceleration_v2(simulation_positions[j], pos_array, mass_array, G)
             #Update position and velocities
