@@ -4,7 +4,7 @@ import numpy as np
 import sys
 
 from time import perf_counter
-#from cython.parallel cimport prange
+from cython.parallel cimport prange
 
 
 def initialise(n):
@@ -120,16 +120,16 @@ def main(steps,days):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = perf_counter()
 
-    #Any global parameters within main()
-    TIMESTEP = 60*60*24*days        #time step in seconds
-    G = 6.6743E-11                 #Gravitational Constant  
-    TOTAL_BODIES = 5
-
     #Choose whioch state to INITIALISE
     pos_array, vel_array, mass_array = initialise_solar_system()
     # pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
     # pos_array, vel_array, mass_array = initialise_sun_earth()
     
+    #Any global parameters within main()
+    TIMESTEP = 60*60*24*days        #time step in seconds
+    G = 6.6743E-11                 #Gravitational Constant  
+    TOTAL_BODIES = len(pos_array)
+
     #Setup variables for the simulation
     simulation_positions = pos_array
     simulation_velocities = vel_array
@@ -145,7 +145,7 @@ def main(steps,days):
         KE = 0
         GPE = 0
         #Runs through each body
-        for j in range(len(pos_array)):
+        for j in prange(TOTAL_BODIES, nogil = True):
             #Calculate the total acceleration 
             acc_vector = get_total_acceleration_v2(simulation_positions[j], pos_array, mass_array, G)
             #Update position and velocities
