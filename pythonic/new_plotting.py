@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-import cv2
-import glob
 
 #Removes files
 files = glob.glob('images\*')
@@ -29,4 +27,4 @@ for counter, i in enumerate(temp_x_ys):
     plt.savefig(f'images\{counter}.jpg')
 
 
-#Turns images into video
+ 
