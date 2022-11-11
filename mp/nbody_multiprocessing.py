@@ -3,6 +3,8 @@
 import numpy as np
 from time import perf_counter
 import sys
+from multiprocessing import Pool, Array
+from itertools import repeat
 
 def initialise(n):
     #Initialises random xyz, velocity and mass state 
@@ -58,7 +60,10 @@ def initialise_solar_system():
     return np.asarray(xyz),np.asarray(vels),np.asarray(mass)
 
 #Gets the acceleration in x,y,z of a single body and returns its as an array
-def get_total_acceleration_v2(body_position, all_positions, masses, G):
+def get_total_acceleration_v2(index, args):
+    
+    all_positions, masses, G = args[0], args[1], args[2]
+    body_position = all_positions[index]
     
     #Set acceleration in each dimension to 0
     ax = ay = az = 0
@@ -81,28 +86,17 @@ def get_total_acceleration_v2(body_position, all_positions, masses, G):
     
     return np.array([ax, ay, az])
 
-#Function calculates Potential Energy (PE) and Kinetic Energy (KE) from Velocity and position vector
-def get_Energy(velocity, mass, body_position, all_positions, masses, G):
-    #Kinetic Energy 1/2 m v^2
-    KE = 0.5*mass*(sum(velocity**2))
-    #Gravitational Energy GMm/r
-    softening_factor = 1
-    GPE = 0
-    #finds the GPE for each body then sums up
-    for i, position in enumerate(all_positions):
-        r = body_position - position
-        radius = np.sqrt(r[0]**2 + r[1]**2 + r[2]**2)
-        if radius > 0:
-            GPE += 0.5*G*masses[i]*mass/(radius)
-    return KE, GPE
 
 #Takes acc vector and timesteps, returning new position, new velocity
-def time_step(position, velocity, acceleration, dt):
+def time_step(index, args):
+    position, velocity, acceleration, dt = args[0][index], args[1][index], args[2][index], args[3]
+    
     #Do relevent calculations based on SUVAT
     #This method is bad for energy conservation
     new_position = position + velocity*dt
     new_velocity = velocity + acceleration*dt
-    return new_position, new_velocity
+    returnable = np.concatenate((new_position, new_velocity))
+    return returnable
 
 #Simple info function
 def info(iterations, time_per_step, init_time, sim_time):
@@ -138,27 +132,35 @@ def main(steps,days):
 
     #time step through the simulation
     for i in range(steps):
-        #Keep track of GPE and KE each time step
-        KE = 0
-        GPE = 0
-        #Runs through each body
-        for j in range(len(pos_array)):
-            #Calculate the total acceleration 
-            acc_vector = get_total_acceleration_v2(simulation_positions[j], simulation_positions, mass_array, G)
-            #Update position and velocities
-            new_pos, new_vel = time_step(simulation_positions[j], simulation_velocities[j], acc_vector, TIMESTEP)
-            #Holds the new positions
-            simulation_positions[j] = new_pos
-            simulation_velocities[j] = new_vel
-            #Finds the KE and GPE of the new state and then stores it
-            KE_temp, GPE_temp = get_Energy(new_vel, mass_array[j], simulation_positions[j], pos_array, mass_array, G)
-            KE += KE_temp
-            GPE += GPE_temp
-            
+        #Open a pool of workers and shared index
+    
+        p = Pool(12)
+        indexes = Array('i', range(len(simulation_positions)))
+        
+        #Zip args,
+        get_acc_arguments = [simulation_positions, mass_array, G]
+        #send iterable,, through star map
+        acc_vectors = p.starmap(get_total_acceleration_v2, zip(indexes, repeat(get_acc_arguments)))
+        
+        time_step_arguments = [simulation_positions, simulation_velocities, acc_vectors, TIMESTEP]
+        result = p.starmap(time_step, zip(indexes, repeat(time_step_arguments)))
+        ### Result[body][new_pos,new_vel] 
+        new_pos = [result[i][:3] for i in range(len(result))]
+        new_vel = [result[i][:3] for i in range(len(result))]
+
+        #Update position and velocities
+        #new_pos, new_vel
+        #Holds the new positions
+        simulation_positions[j] = new_pos
+        simulation_velocities[j] = new_vel
+        
+        #
+        # Removed energy
+        #
+        
         #Store every x time steps to an array
         if i%10 == 0:
             stored_positions.append(simulation_positions.copy())
-            stored_energy.append([KE,GPE,KE+GPE].copy())
 
     #Runs an information function that writes data cleanly
     _simulation_end = perf_counter()

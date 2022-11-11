@@ -1,18 +1,19 @@
 
 #Bring in all libraries
 import numpy as np
+cimport numpy as np
 import sys
 
 from time import perf_counter
 from cython.parallel cimport prange
 
 
-def initialise(n):
-    #Initialises random xyz, velocity and mass state 
-    xyzs = np.random.randint(-10,10,size=(n,3))*10E12
-    vels = np.random.randint(-10,10, size=(n,3))*0
-    mass = np.random.randint(1, 10, size=(n))*10E30
-    return xyzs, vels, mass
+#def initialise(n):
+#    #Initialises random xyz, velocity and mass state 
+#    xyzs = np.random.randint(-10,10,size=(n,3))
+#    vels = np.random.randint(-10,10, size=(n,3))
+#    mass = np.random.randint(1, 10, size=(n))
+#    return xyzs, vels, mass
     
 def initialise_sun_earth():
     #create solar system dict with x_pos, y_vel, mass
@@ -62,16 +63,22 @@ def initialise_solar_system():
 
 #Gets the acceleration in x,y,z of a single body and returns its as an array
 def get_total_acceleration_v2(body_position, all_positions, masses, G):
-    
+    cdef float ax, ay, az, dx, dy, dz, sq_root, factor
+    cdef int softening_factor, x, i
+
+    cdef double[:] r, body_position, position
+
     #Set acceleration in each dimension to 0
     ax = ay = az = 0
     #Define a softening factor to negate dived by 0 erros or inf accelerations
     softening_factor = 1
 
+    x = len(all_positions)
+
     #Iterate through all positions in ralation to our body
-    for i, position in enumerate(all_positions):
+    for i in range(x):
         #Find the seperation as a vector and split into seperate variable
-        r = body_position - position
+        r = body_position - all_positions[i]
         dx, dy, dz = r[0], r[1], r[2]
         #Calc for finding acceleration factor
         squared_sep = dx*dx + dy*dy + dz*dz + softening_factor
@@ -83,7 +90,7 @@ def get_total_acceleration_v2(body_position, all_positions, masses, G):
         az += factor*dz
     
     return np.array([ax, ay, az])
-
+       
 #Function calculates Potential Energy (PE) and Kinetic Energy (KE) from Velocity and position vector
 def get_Energy(velocity, mass, body_position, all_positions, masses, G):
     #Kinetic Energy 1/2 m v^2
@@ -117,6 +124,7 @@ def info(iterations, time_per_step, init_time, sim_time):
     print(f'Simulation Time \t = \t {sim_time}(s)')
 
 def main(steps,days):
+
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = perf_counter()
 
@@ -133,8 +141,8 @@ def main(steps,days):
     #Setup variables for the simulation
     simulation_positions = pos_array
     simulation_velocities = vel_array
-    stored_positions = []
-    stored_energy = []
+    stored_positions = np.array()
+    stored_energy = np.array()
 
     _initialisation_end = perf_counter()
     _simulation_start = perf_counter()
@@ -145,7 +153,7 @@ def main(steps,days):
         KE = 0
         GPE = 0
         #Runs through each body
-        for j in prange(TOTAL_BODIES, nogil = True):
+        for j in range(TOTAL_BODIES):
             #Calculate the total acceleration 
             acc_vector = get_total_acceleration_v2(simulation_positions[j], pos_array, mass_array, G)
             #Update position and velocities
