@@ -107,18 +107,18 @@ def info(iterations, time_per_step, init_time, sim_time):
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
 
-def main(steps,days):
+def main(steps,days,threads,bodies):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = perf_counter()
 
     #Any global parameters within main()
     TIMESTEP = 60*60*24*days        #time step in seconds
     G = 6.6743E-11                 #Gravitational Constant  
-    TOTAL_BODIES = 5
+    TOTAL_BODIES = bodies
 
     #Choose whioch state to INITIALISE
-    pos_array, vel_array, mass_array = initialise_solar_system()
-    # pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
+    # pos_array, vel_array, mass_array = initialise_solar_system()
+    pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
     # pos_array, vel_array, mass_array = initialise_sun_earth()
     
     #Setup variables for the simulation
@@ -133,8 +133,8 @@ def main(steps,days):
     #time step through the simulation
     for i in range(steps):
         #Open a pool of workers and shared index
-    
-        p = Pool(12)
+        test_start = perf_counter()
+        p = Pool(threads)
         indexes = Array('i', range(len(simulation_positions)))
         
         #Zip args,
@@ -148,16 +148,16 @@ def main(steps,days):
         new_pos = [result[i][:3] for i in range(len(result))]
         new_vel = [result[i][:3] for i in range(len(result))]
 
+        test_end = perf_counter()
+        print(test_end-test_start)
         #Update position and velocities
         #new_pos, new_vel
         #Holds the new positions
         simulation_positions[j] = new_pos
         simulation_velocities[j] = new_vel
-        
         #
         # Removed energy
         #
-        
         #Store every x time steps to an array
         if i%10 == 0:
             stored_positions.append(simulation_positions.copy())
@@ -175,10 +175,10 @@ def main(steps,days):
 
 #Arg passing for easier testing
 if __name__ == "__main__":
-    if len(sys.argv) == 3:
-        main(int(sys.argv[1]), int(sys.argv[2]))
+    if len(sys.argv) == 5:
+        main(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]))
     else:
-        print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION>".format(sys.argv[0]))
+        print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION> <THREADS> <BODIES>".format(sys.argv[0]))
 
 
 """For Solar system set Days Per Iteration to 1"""
