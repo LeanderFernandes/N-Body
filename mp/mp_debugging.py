@@ -59,7 +59,6 @@ def initialise_solar_system():
 
 #Gets the acceleration in x,y,z of a single body and returns its as an array
 def get_total_acceleration_v2(body_position, all_positions, masses, G):
-    
     #Set acceleration in each dimension to 0
     ax = ay = az = 0
     #Define a softening factor to negate dived by 0 erros or inf accelerations
@@ -77,13 +76,13 @@ def get_total_acceleration_v2(body_position, all_positions, masses, G):
         ax += factor*dx
         ay += factor*dy
         az += factor*dz
-    
+    print(np.array([ax, ay, az]))
     return np.array([ax, ay, az])
 
 
 #Takes acc vector and timesteps, returning new position, new velocity
 def time_step(position, velocity, acceleration, dt):
-    print(position)
+    print(acceleration)
     #Do relevent calculations based on SUVAT
     #This method is bad for energy conservation
     new_position = position + velocity*dt
@@ -103,7 +102,7 @@ def main(steps,days):
     #Choose whioch state to INITIALISE
     pos_array, vel_array, mass_array = initialise_sun_earth()
     # pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
-    # pos_array, vel_array, mass_array = initialise_sun_earth()
+    # pos_array, vel_array, mass_array = initialise_solar_system()
     
     #Setup variables for the simulation
     simulation_positions = pos_array
@@ -145,6 +144,6 @@ def main(steps,days):
 
 #Arg passing for easier testing
 if __name__ == "__main__":
-    main(1, 1)
+    main(5, 1)
 
 """For Solar system set Days Per Iteration to 1"""

@@ -64,7 +64,7 @@ def get_total_acceleration_v2(index, args):
     
     all_positions, masses, G = args[0], args[1], args[2]
     body_position = all_positions[index]
-    
+    # print(body_position)
     #Set acceleration in each dimension to 0
     ax = ay = az = 0
     #Define a softening factor to negate dived by 0 erros or inf accelerations
@@ -83,14 +83,12 @@ def get_total_acceleration_v2(index, args):
         ax += factor*dx
         ay += factor*dy
         az += factor*dz
-    
     return np.array([ax, ay, az])
 
 
 #Takes acc vector and timesteps, returning new position, new velocity
 def time_step(index, args):
     position, velocity, acceleration, dt = args[0][index], args[1][index], args[2][index], args[3]
-    
     #Do relevent calculations based on SUVAT
     #This method is bad for energy conservation
     new_position = position + velocity*dt
@@ -107,14 +105,14 @@ def info(iterations, time_per_step, init_time, sim_time):
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
 
-def main(steps,days,threads,bodies):
+def main(steps,days,threads,):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = perf_counter()
 
     #Any global parameters within main()
     TIMESTEP = 60*60*24*days        #time step in seconds
     G = 6.6743E-11                 #Gravitational Constant  
-    TOTAL_BODIES = bodies
+    TOTAL_BODIES = 50
 
     #Choose whioch state to INITIALISE
     # pos_array, vel_array, mass_array = initialise_solar_system()
@@ -126,45 +124,45 @@ def main(steps,days,threads,bodies):
     simulation_velocities = vel_array
     stored_positions = []
     stored_energy = []
-
+    
     _initialisation_end = perf_counter()
     _simulation_start = perf_counter()
 
     #time step through the simulation
     for i in range(steps):
         #Open a pool of workers and shared index
-        test_start = perf_counter()
-        p = Pool(threads)
-        indexes = Array('i', range(len(simulation_positions)))
-        
-        #Zip args,
-        get_acc_arguments = [simulation_positions, mass_array, G]
-        #send iterable,, through star map
-        acc_vectors = p.starmap(get_total_acceleration_v2, zip(indexes, repeat(get_acc_arguments)))
-        
-        time_step_arguments = [simulation_positions, simulation_velocities, acc_vectors, TIMESTEP]
-        result = p.starmap(time_step, zip(indexes, repeat(time_step_arguments)))
-        ### Result[body][new_pos,new_vel] 
-        new_pos = [result[i][:3] for i in range(len(result))]
-        new_vel = [result[i][:3] for i in range(len(result))]
+        with Pool(threads) as p:
+            indexes = Array('i', range(len(simulation_positions)))
+            
+            #Zip args,
+            get_acc_arguments = [simulation_positions, mass_array, G]
+            #send iterable,, through star map
+            acc_vectors = p.starmap(get_total_acceleration_v2, zip(indexes, repeat(get_acc_arguments)))
+            
+            time_step_arguments = [simulation_positions, simulation_velocities, acc_vectors, TIMESTEP]
+            result = p.starmap(time_step, zip(indexes, repeat(time_step_arguments)))
+            ### Result[body][new_pos,new_vel] 
+            new_pos = np.asarray([result[i][:3] for i in range(len(result))])
+            new_vel = np.asarray([result[i][3:] for i in range(len(result))])
 
-        test_end = perf_counter()
-        print(test_end-test_start)
+            p.close()
+            p.join()
         #Update position and velocities
         #new_pos, new_vel
         #Holds the new positions
-        simulation_positions[j] = new_pos
-        simulation_velocities[j] = new_vel
+        simulation_positions = new_pos
+        simulation_velocities = new_vel
         #
         # Removed energy
         #
         #Store every x time steps to an array
         if i%10 == 0:
-            stored_positions.append(simulation_positions.copy())
+            stored_positions.append(new_pos.copy())
+            print(i)
+        
 
     #Runs an information function that writes data cleanly
     _simulation_end = perf_counter()
-    print(_initialisation_end - _initialisation_start, _initialisation_start, _initialisation_end)
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
     info(steps, TIMESTEP, initialisation_time, simulation_time)
@@ -175,10 +173,10 @@ def main(steps,days,threads,bodies):
 
 #Arg passing for easier testing
 if __name__ == "__main__":
-    if len(sys.argv) == 5:
-        main(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]))
+    if len(sys.argv) == 4:
+        main(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]))
     else:
-        print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION> <THREADS> <BODIES>".format(sys.argv[0]))
+        print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION> <THREADS>".format(sys.argv[0]))
 
 
 """For Solar system set Days Per Iteration to 1"""

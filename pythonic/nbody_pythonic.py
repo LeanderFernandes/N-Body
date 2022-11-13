@@ -7,7 +7,7 @@ import sys
 def initialise(n):
     #Initialises random xyz, velocity and mass state 
     xyzs = np.random.randint(-10,10,size=(n,3))*10E12
-    vels = np.random.randint(-10,10, size=(n,3))*0
+    vels = np.random.randint(-10,10, size=(n,3))*30.0E3
     mass = np.random.randint(1, 10, size=(n))*10E30
     return xyzs, vels, mass
     
@@ -120,11 +120,11 @@ def main(steps,days):
     #Any global parameters within main()
     TIMESTEP = 60*60*24*days        #time step in seconds
     G = 6.6743E-11                 #Gravitational Constant  
-    TOTAL_BODIES = 5
+    TOTAL_BODIES = 50
 
     #Choose whioch state to INITIALISE
-    pos_array, vel_array, mass_array = initialise_solar_system()
-    # pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
+    # pos_array, vel_array, mass_array = initialise_solar_system()
+    pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
     # pos_array, vel_array, mass_array = initialise_sun_earth()
     
     #Setup variables for the simulation
