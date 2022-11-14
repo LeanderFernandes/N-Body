@@ -68,7 +68,7 @@ def get_total_acceleration_v2(index, args):
     #Set acceleration in each dimension to 0
     ax = ay = az = 0
     #Define a softening factor to negate dived by 0 erros or inf accelerations
-    softening_factor = 1
+    softening_factor = 1.3E9
 
     #Iterate through all positions in ralation to our body
     for i, position in enumerate(all_positions):
@@ -156,7 +156,7 @@ def main(steps,days,threads,):
         # Removed energy
         #
         #Store every x time steps to an array
-        if i%10 == 0:
+        if i%1 == 0:
             stored_positions.append(new_pos.copy())
             print(i)
         

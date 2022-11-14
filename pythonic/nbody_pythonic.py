@@ -6,9 +6,9 @@ import sys
 
 def initialise(n):
     #Initialises random xyz, velocity and mass state 
-    xyzs = np.random.randint(-10,10,size=(n,3))*10E12
-    vels = np.random.randint(-10,10, size=(n,3))*30.0E3
-    mass = np.random.randint(1, 10, size=(n))*10E30
+    xyzs = np.random.randn(n,3)*10E12
+    vels = np.random.randn(n,3)*0.0E3
+    mass = np.random.randn(n)*100E30
     return xyzs, vels, mass
     
 def initialise_sun_earth():
@@ -63,7 +63,7 @@ def get_total_acceleration_v2(body_position, all_positions, masses, G):
     #Set acceleration in each dimension to 0
     ax = ay = az = 0
     #Define a softening factor to negate dived by 0 erros or inf accelerations
-    softening_factor = 1
+    softening_factor = 1.3E9
 
     #Iterate through all positions in ralation to our body
     for i, position in enumerate(all_positions):
@@ -120,7 +120,7 @@ def main(steps,days):
     #Any global parameters within main()
     TIMESTEP = 60*60*24*days        #time step in seconds
     G = 6.6743E-11                 #Gravitational Constant  
-    TOTAL_BODIES = 50
+    TOTAL_BODIES = 40
 
     #Choose whioch state to INITIALISE
     # pos_array, vel_array, mass_array = initialise_solar_system()
@@ -156,9 +156,10 @@ def main(steps,days):
             GPE += GPE_temp
             
         #Store every x time steps to an array
-        if i%10 == 0:
+        if i%2 == 0:
             stored_positions.append(simulation_positions.copy())
             stored_energy.append([KE,GPE,KE+GPE].copy())
+            print(i)
 
     #Runs an information function that writes data cleanly
     _simulation_end = perf_counter()
