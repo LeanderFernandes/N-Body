@@ -8,7 +8,7 @@ def initialise(n):
     #Initialises random xyz, velocity and mass state 
     xyzs = np.random.randn(n,3)*10E12
     vels = np.random.randn(n,3)*0.0E3
-    mass = np.random.randn(n)*100E30
+    mass = np.random.uniform(0,1,n)*100E30
     return xyzs, vels, mass
     
 def initialise_sun_earth():
@@ -171,6 +171,7 @@ def main(steps,days):
     #Save stroed positions to numpy file
     np.save("nbody_positions", stored_positions)
     np.save("nbody_energies", stored_energy)
+    np.save("nbody_masses", mass_array)
 
 #Arg passing for easier testing
 if __name__ == "__main__":
