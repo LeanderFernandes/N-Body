@@ -105,22 +105,23 @@ def time_step(position, velocity, acceleration, dt):
     return new_position, new_velocity
 
 #Simple info function
-def info(iterations, time_per_step, init_time, sim_time):
+def info(iterations, time_per_step, init_time, sim_time, num_bodies):
     print("\n**********************************\n")
     print(f"This simulation runs for {iterations} iterations in steps of {time_per_step} seconds")
     print(f"Total simulation time is {iterations*time_per_step/(60*60*24*365.25)}yrs")
+    print(f'This was for {num_bodies} bodies.')
     print("\n**********************************\n")  
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
 
-def main(steps,days):
+def main(steps,days,bodies):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = perf_counter()
 
     #Any global parameters within main()
     TIMESTEP = 60*60*24*days        #time step in seconds
     G = 6.6743E-11                 #Gravitational Constant  
-    TOTAL_BODIES = 40
+    TOTAL_BODIES = bodies
 
     #Choose whioch state to INITIALISE
     # pos_array, vel_array, mass_array = initialise_solar_system()
@@ -159,14 +160,13 @@ def main(steps,days):
         if i%2 == 0:
             stored_positions.append(simulation_positions.copy())
             stored_energy.append([KE,GPE,KE+GPE].copy())
-            print(i)
 
     #Runs an information function that writes data cleanly
     _simulation_end = perf_counter()
     print(_initialisation_end - _initialisation_start, _initialisation_start, _initialisation_end)
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
-    info(steps, TIMESTEP, initialisation_time, simulation_time)
+    info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES)
     
     #Save stroed positions to numpy file
     np.save("nbody_positions", stored_positions)
@@ -175,10 +175,10 @@ def main(steps,days):
 
 #Arg passing for easier testing
 if __name__ == "__main__":
-    if len(sys.argv) == 3:
-        main(int(sys.argv[1]), int(sys.argv[2]))
+    if len(sys.argv) == 4:
+        main(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]))
     else:
-        print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION>".format(sys.argv[0]))
+        print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION> <BODIES>".format(sys.argv[0]))
 
 
 """For Solar system set Days Per Iteration to 1"""

@@ -8,9 +8,9 @@ from itertools import repeat
 
 def initialise(n):
     #Initialises random xyz, velocity and mass state 
-    xyzs = np.random.randint(-10,10,size=(n,3))*10E12
-    vels = np.random.randint(-10,10, size=(n,3))*0
-    mass = np.random.randint(1, 10, size=(n))*10E30
+    xyzs = np.random.randn(n,3)*10E12
+    vels = np.random.randn(n,3)*0.0E3
+    mass = np.random.uniform(0,1,n)*100E30
     return xyzs, vels, mass
     
 def initialise_sun_earth():
@@ -97,22 +97,23 @@ def time_step(index, args):
     return returnable
 
 #Simple info function
-def info(iterations, time_per_step, init_time, sim_time):
+def info(iterations, time_per_step, init_time, sim_time, threads, num_bodies):
     print("\n**********************************\n")
     print(f"This simulation runs for {iterations} iterations in steps of {time_per_step} seconds")
     print(f"Total simulation time is {iterations*time_per_step/(60*60*24*365.25)}yrs")
+    print(f'This was for {threads} threads and {num_bodies} bodies.')
     print("\n**********************************\n")  
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
 
-def main(steps,days,threads,):
+def main(steps,days,threads,bodies):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = perf_counter()
 
     #Any global parameters within main()
     TIMESTEP = 60*60*24*days        #time step in seconds
     G = 6.6743E-11                 #Gravitational Constant  
-    TOTAL_BODIES = 50
+    TOTAL_BODIES = bodies
 
     #Choose whioch state to INITIALISE
     # pos_array, vel_array, mass_array = initialise_solar_system()
@@ -147,8 +148,7 @@ def main(steps,days,threads,):
 
             p.close()
             p.join()
-        #Update position and velocities
-        #new_pos, new_vel
+
         #Holds the new positions
         simulation_positions = new_pos
         simulation_velocities = new_vel
@@ -156,27 +156,27 @@ def main(steps,days,threads,):
         # Removed energy
         #
         #Store every x time steps to an array
-        if i%1 == 0:
+        if i%5 == 0:
             stored_positions.append(new_pos.copy())
-            print(i)
         
 
     #Runs an information function that writes data cleanly
     _simulation_end = perf_counter()
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
-    info(steps, TIMESTEP, initialisation_time, simulation_time)
+    info(steps, TIMESTEP, initialisation_time, simulation_time, threads, TOTAL_BODIES)
     
     #Save stroed positions to numpy file
     np.save("nbody_positions", stored_positions)
     np.save("nbody_energies", stored_energy)
+    np.save("nbody_masses", mass_array)
 
 #Arg passing for easier testing
 if __name__ == "__main__":
-    if len(sys.argv) == 4:
-        main(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]))
+    if len(sys.argv) == 5:
+        main(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]))
     else:
-        print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION> <THREADS>".format(sys.argv[0]))
+        print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION> <THREADS> <BODIES>".format(sys.argv[0]))
 
 
 """For Solar system set Days Per Iteration to 1"""
