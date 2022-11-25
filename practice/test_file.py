@@ -3,8 +3,11 @@ import numpy as np
 import sys
 
 
-def double(x):
-    return x*2
+def double(dictionary):
+    dictionary['key1'] = first_array
+    dictionary['key2'] = second_array
+    x= sum(first_array*second_array)
+    return x
 
 def main(nodes):
     comm = MPI.COMM_WORLD
@@ -21,9 +24,11 @@ def main(nodes):
         
     #This is the part to for loop(time stepping loop)
     for i in range(3):
+        
         #Comm scatter and gather
         data = comm.scatter(data, root=0)
-
+        
+        #Noraml functions
         for i,number in enumerate(data):
             data[i] = double(number)
             
