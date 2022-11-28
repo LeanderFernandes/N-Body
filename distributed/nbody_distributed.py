@@ -161,9 +161,9 @@ def main(steps,days,bodies, nodes):
         
         pos_buffer = np.ones(len(rank_index), dtype='object')
         vel_buffer = np.ones(len(rank_index), dtype='object')
-        if rank == 1:
-            print(len(rank_index))
-            print(rank_index)
+        # if rank == 1:
+        #     print(len(rank_index))
+        #     print(rank_index)
       
             
         #Runs through each body
@@ -186,8 +186,8 @@ def main(steps,days,bodies, nodes):
             simulation_positions = np.concatenate(pos_gathered)
             simulation_velocities = np.concatenate(vel_gathered)
         
-        if rank == 1:
-            print(f"Run number {i}",simulation_positions)
+        # if rank == 1:
+        #     print(f"Run number {i}",simulation_positions)
         
         #Store every x time steps to an array
         # if i%2 == 0:
@@ -198,7 +198,8 @@ def main(steps,days,bodies, nodes):
     # print(_initialisation_end - _initialisation_start, _initialisation_start, _initialisation_end)
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
-    # info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES)
+    if rank == 0:
+        info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES)
     
     #Save stroed positions to numpy file
     # np.save("nbody_positions", stored_positions)
@@ -208,7 +209,7 @@ def main(steps,days,bodies, nodes):
 #Arg passing for easier testing
 if __name__ == "__main__":
     if len(sys.argv) == 2:
-        main(5, 1, 9, int(sys.argv[1]))
+        main(10, 1, 1000, int(sys.argv[1]))
     else:
         print("Usage: Python {} <NODES>".format(sys.argv[0]))
 
