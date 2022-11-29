@@ -107,7 +107,7 @@ def time_step(position, velocity, acceleration, dt):
     return np.array(new_position), np.array(new_velocity)
 
 #Simple info function
-def info(iterations, time_per_step, init_time, sim_time, num_bodies):
+def info(iterations, time_per_step, init_time, sim_time, num_bodies, nodes):
     print("\n**********************************\n")
     print(f"This simulation runs for {iterations} iterations in steps of {time_per_step} seconds")
     print(f"Total simulation time is {iterations*time_per_step/(60*60*24*365.25)}yrs")
@@ -116,12 +116,16 @@ def info(iterations, time_per_step, init_time, sim_time, num_bodies):
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
 
-def main(steps,days,bodies, nodes):
+    print(f"Number of nodes used : {nodes}")
+def main(steps,days,bodies):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = perf_counter()
     
+    #Finds rank of nodes and number of nodes
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
+    nodes = comm.Get_size()
+
 
     #Any global parameters within main()
     TIMESTEP = 60*60*24*days        #time step in seconds
@@ -147,6 +151,8 @@ def main(steps,days,bodies, nodes):
     ##### SCATTER INDEXES #####
     if rank == 0:
         all_indexes = np.array_split(index, nodes)
+        communication_time_total = 0
+        computation_time_total = 0
     else:
         all_indexes = None
     
@@ -154,7 +160,7 @@ def main(steps,days,bodies, nodes):
 
     #time step through the simulation
     for i in range(steps):
-        
+        one = MPI.Wtime()
         ###NEED TO BROADCAST CORRECT ARRAYS AT START
         simulation_positions = comm.bcast(simulation_positions, root=0)
         simulation_velocities = comm.bcast(simulation_velocities, root=0)
@@ -164,10 +170,10 @@ def main(steps,days,bodies, nodes):
         # if rank == 1:
         #     print(len(rank_index))
         #     print(rank_index)
-      
             
         #Runs through each body
         for j,body in enumerate(rank_index):
+            three = MPI.Wtime()
             #Calculate the total acceleration 
             acc_vector = get_total_acceleration_v2(simulation_positions[body], simulation_positions, mass_array, G)
             #Update position and velocities
@@ -177,7 +183,7 @@ def main(steps,days,bodies, nodes):
             vel_buffer[j] = new_vel
             # if rank == 1:
             #     print(f'inloop {acc_vector}')
-        
+            four = MPI.Wtime()
         
         ##### GATHER POSITIONS AND VELS #####
         pos_gathered = comm.gather(pos_buffer, root=0)
@@ -185,6 +191,13 @@ def main(steps,days,bodies, nodes):
         if rank == 0:
             simulation_positions = np.concatenate(pos_gathered)
             simulation_velocities = np.concatenate(vel_gathered)
+        
+        two = MPI.Wtime()
+        if rank == 0:
+            computation_time = four - three
+            communication_time = (two - one) - computation_time
+            computation_time_total += computation_time
+            communication_time_total += communication_time
         
         # if rank == 1:
         #     print(f"Run number {i}",simulation_positions)
@@ -199,8 +212,8 @@ def main(steps,days,bodies, nodes):
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
     if rank == 0:
-        info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES)
-    
+        info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES, nodes)
+        print(f'communication: {communication_time}, computation: {computation_time}')
     #Save stroed positions to numpy file
     # np.save("nbody_positions", stored_positions)
     # np.save("nbody_energies", stored_energy)
@@ -208,10 +221,10 @@ def main(steps,days,bodies, nodes):
 
 #Arg passing for easier testing
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        main(10, 1, 1000, int(sys.argv[1]))
+    if len(sys.argv) == 4:
+        main(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]))
     else:
-        print("Usage: Python {} <NODES>".format(sys.argv[0]))
-
+        print("Usage: Python {} <ITERATIONS> <DAYS PER ITERATION> <BODIES>".format(sys.argv[0]))
+        print("This program automatically finds how many nodes are available")
 
 """For Solar system set Days Per Iteration to 1"""
