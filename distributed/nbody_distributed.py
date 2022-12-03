@@ -107,16 +107,21 @@ def time_step(position, velocity, acceleration, dt):
     return np.array(new_position), np.array(new_velocity)
 
 #Simple info function
-def info(iterations, time_per_step, init_time, sim_time, num_bodies, nodes):
+def info(iterations, time_per_step, init_time, sim_time, 
+         num_bodies, nodes, communication_time, computation_time):
     print("\n**********************************\n")
     print(f"This simulation runs for {iterations} iterations in steps of {time_per_step} seconds")
     print(f"Total simulation time is {iterations*time_per_step/(60*60*24*365.25)}yrs")
     print(f'This was for {num_bodies} bodies.')
-    print("\n**********************************\n")  
+    print("\n**********************************\n") 
+     
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
-
-    print(f"Number of nodes used : {nodes}")
+    print(f'Number of bodies \t = \t {num_bodies}')
+    print(f"Number of nodes used \t = \t {nodes}")
+    print(f'Communication time \t = \t {communication_time}')
+    print(f'Computation time \t = \t {computation_time}')
+    
 def main(steps,days,bodies):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
     _initialisation_start = perf_counter()
@@ -212,8 +217,8 @@ def main(steps,days,bodies):
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
     if rank == 0:
-        info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES, nodes)
-        print(f'communication: {communication_time}, computation: {computation_time}')
+        info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES, 
+             nodes, communication_time_total, computation_time_total)
     #Save stroed positions to numpy file
     # np.save("nbody_positions", stored_positions)
     # np.save("nbody_energies", stored_energy)
