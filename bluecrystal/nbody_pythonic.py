@@ -169,9 +169,9 @@ def main(steps,days,bodies):
     info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES)
     
     #Save stroed positions to numpy file
-    np.save("nbody_positions", stored_positions)
-    np.save("nbody_energies", stored_energy)
-    np.save("nbody_masses", mass_array)
+    # np.save("nbody_positions", stored_positions)
+    # np.save("nbody_energies", stored_energy)
+    # np.save("nbody_masses", mass_array)
 
 #Arg passing for easier testing
 if __name__ == "__main__":
