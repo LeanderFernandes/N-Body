@@ -99,12 +99,11 @@ def time_step(index, args):
 #Simple info function
 def info(iterations, time_per_step, init_time, sim_time, threads, num_bodies):
     print("\n**********************************\n")
-    print(f"This simulation runs for {iterations} iterations in steps of {time_per_step} seconds")
-    print(f"Total simulation time is {iterations*time_per_step/(60*60*24*365.25)}yrs")
-    print(f'This was for {threads} threads and {num_bodies} bodies.')
-    print("\n**********************************\n")  
+    print(f'Number of bodies \t = \t {num_bodies}')
+    print(f'Threads used \t \t = \t {threads}')
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
+    print("\n**********************************\n\n")  
 
 def main(steps,days,threads,bodies):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
@@ -156,8 +155,8 @@ def main(steps,days,threads,bodies):
         # Removed energy
         #
         #Store every x time steps to an array
-        if i%5 == 0:
-            stored_positions.append(new_pos.copy())
+        # if i%5 == 0:
+        #     stored_positions.append(new_pos.copy())
         
 
     #Runs an information function that writes data cleanly
@@ -167,9 +166,9 @@ def main(steps,days,threads,bodies):
     info(steps, TIMESTEP, initialisation_time, simulation_time, threads, TOTAL_BODIES)
     
     #Save stroed positions to numpy file
-    np.save("nbody_positions", stored_positions)
-    np.save("nbody_energies", stored_energy)
-    np.save("nbody_masses", mass_array)
+    # np.save("nbody_positions", stored_positions)
+    # np.save("nbody_energies", stored_energy)
+    # np.save("nbody_masses", mass_array)
 
 #Arg passing for easier testing
 if __name__ == "__main__":
