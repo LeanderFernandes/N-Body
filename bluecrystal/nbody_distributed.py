@@ -110,17 +110,14 @@ def time_step(position, velocity, acceleration, dt):
 def info(iterations, time_per_step, init_time, sim_time, 
          num_bodies, nodes, communication_time, computation_time):
     print("\n**********************************\n")
-    print(f"This simulation runs for {iterations} iterations in steps of {time_per_step} seconds")
-    print(f"Total simulation time is {iterations*time_per_step/(60*60*24*365.25)}yrs")
-    print(f'This was for {num_bodies} bodies.')
-    print("\n**********************************\n") 
-     
-    print(f'Initialisation Time \t = \t {init_time}(s)')
-    print(f'Simulation Time \t = \t {sim_time}(s)')
-    print(f'Number of bodies \t = \t {num_bodies}')
-    print(f"Number of nodes used \t = \t {nodes}")
-    print(f'Communication time \t = \t {communication_time}')
-    print(f'Computation time \t = \t {computation_time}')
+    print(f'Initialisation Time \t\t = \t {init_time}(s)')
+    print(f'Simulation Time \t\t = \t {sim_time}(s)')
+    print(f'Number of bodies \t\t = \t {num_bodies}')
+    print(f"Number of nodes used \t\t = \t {nodes}")
+    print(f'Communication time \t\t = \t {communication_time}')
+    print(f'Computation time \t\t = \t {computation_time}')
+    print("\n**********************************\n")
+    
     
 def main(steps,days,bodies):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
@@ -170,6 +167,8 @@ def main(steps,days,bodies):
         simulation_positions = comm.bcast(simulation_positions, root=0)
         simulation_velocities = comm.bcast(simulation_velocities, root=0)
         
+        three = MPI.Wtime()
+        
         pos_buffer = np.ones(len(rank_index), dtype='object')
         vel_buffer = np.ones(len(rank_index), dtype='object')
         # if rank == 1:
@@ -178,7 +177,6 @@ def main(steps,days,bodies):
             
         #Runs through each body
         for j,body in enumerate(rank_index):
-            three = MPI.Wtime()
             #Calculate the total acceleration 
             acc_vector = get_total_acceleration_v2(simulation_positions[body], simulation_positions, mass_array, G)
             #Update position and velocities
@@ -188,7 +186,8 @@ def main(steps,days,bodies):
             vel_buffer[j] = new_vel
             # if rank == 1:
             #     print(f'inloop {acc_vector}')
-            four = MPI.Wtime()
+        
+        four = MPI.Wtime()
         
         ##### GATHER POSITIONS AND VELS #####
         pos_gathered = comm.gather(pos_buffer, root=0)
