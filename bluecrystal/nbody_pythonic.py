@@ -106,13 +106,11 @@ def time_step(position, velocity, acceleration, dt):
 
 #Simple info function
 def info(iterations, time_per_step, init_time, sim_time, num_bodies):
-    print("\n**********************************\n")
-    print(f"This simulation runs for {iterations} iterations in steps of {time_per_step} seconds")
-    print(f"Total simulation time is {iterations*time_per_step/(60*60*24*365.25)}yrs")
-    print("\n**********************************\n")  
+    print("\n-----------------------------------\n") 
+    print(f'Number of bodies \t = \t {num_bodies}')
     print(f'Initialisation Time \t = \t {init_time}(s)')
     print(f'Simulation Time \t = \t {sim_time}(s)')
-    print(f'Number of bodies \t = \t {num_bodies}')
+    print("\n-----------------------------------\n\n") 
 
 def main(steps,days,bodies):
     #Timing variables to monitor the simulation denoted by variables starting with _<name>
@@ -163,7 +161,6 @@ def main(steps,days,bodies):
 
     #Runs an information function that writes data cleanly
     _simulation_end = perf_counter()
-    print(_initialisation_end - _initialisation_start, _initialisation_start, _initialisation_end)
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
     info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES)
