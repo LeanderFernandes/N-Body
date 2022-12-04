@@ -157,9 +157,9 @@ def main(steps,days,bodies):
             # GPE += GPE_temp
             
         #Store every x time steps to an array
-        if i%2 == 0:
-            stored_positions.append(simulation_positions.copy())
-            stored_energy.append([KE,GPE,KE+GPE].copy())
+        # if i%2 == 0:
+        #     stored_positions.append(simulation_positions.copy())
+        #     stored_energy.append([KE,GPE,KE+GPE].copy())
 
     #Runs an information function that writes data cleanly
     _simulation_end = perf_counter()
