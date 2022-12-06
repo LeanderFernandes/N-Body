@@ -216,8 +216,9 @@ def main(steps,days,bodies):
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
     if rank == 0:
-        info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES, 
-             nodes, communication_time_total, computation_time_total)
+        # info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES, 
+        #      nodes, communication_time_total, computation_time_total)
+        print(communication_time_total+computation_time_total)
     #Save stroed positions to numpy file
     # np.save("nbody_positions", stored_positions)
     # np.save("nbody_energies", stored_energy)

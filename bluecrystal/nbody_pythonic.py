@@ -163,7 +163,8 @@ def main(steps,days,bodies):
     _simulation_end = perf_counter()
     initialisation_time = _initialisation_end - _initialisation_start
     simulation_time = _simulation_end - _simulation_start
-    info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES)
+    # info(steps, TIMESTEP, initialisation_time, simulation_time, TOTAL_BODIES)
+    print(simulation_time)
     
     #Save stroed positions to numpy file
     # np.save("nbody_positions", stored_positions)
