@@ -35,10 +35,10 @@ def initialise_sun_earth():
 def initialise_solar_system():
     #create solar system dict with x_pos, y_vel, mass
     solar_system_info = {'sun': [0, 0, 1.989E30],
-                         'mercury': [91E9, 47.9E3, 3.285E23],
+                         'mercury': [69E9, 47.9E3, 3.285E23],
                          'venus': [108.04E9, 35.0E3, 4.867E24],
                          'earth': [148.88E9, 29.8E3, 5.972E24],
-                         'mars': [221.79E9, 24.1E3, 6.39E23],
+                         'mars': [221.79E9, 24.07E3, 6.39E23],
                          'jupiter': [741.13E9, 13.1E3, 1.898E27],
                          'saturn': [1.4719E12, 9.7E3, 5.683E26],
                          'uranus': [2.9432E12, 6.8E3, 8.681E25],
@@ -116,8 +116,8 @@ def main(steps,days,threads,bodies):
     TOTAL_BODIES = bodies
 
     #Choose whioch state to INITIALISE
-    # pos_array, vel_array, mass_array = initialise_solar_system()
-    pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
+    pos_array, vel_array, mass_array = initialise_solar_system()
+    # pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
     # pos_array, vel_array, mass_array = initialise_sun_earth()
     
     #Setup variables for the simulation
