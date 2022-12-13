@@ -1,0 +1,2014 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"languages/anaconda/2020-3.8.5"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "languages/anaconda/2020-3.8.5"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 8.413195610046387e-05(s)
+Simulation Time 	 = 	 0.020437628030776978(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 8.307024836540222e-05(s)
+Simulation Time 	 = 	 0.01950402557849884(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 8.854642510414124e-05(s)
+Simulation Time 	 = 	 0.02043575793504715(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 9.644404053688049e-05(s)
+Simulation Time 	 = 	 0.02087267115712166(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 9.379908442497253e-05(s)
+Simulation Time 	 = 	 0.02115192636847496(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 0.00010534003376960754(s)
+Simulation Time 	 = 	 0.021527200937271118(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 0.00010766088962554932(s)
+Simulation Time 	 = 	 0.023690704256296158(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 0.0001203976571559906(s)
+Simulation Time 	 = 	 0.03308509662747383(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 0.00012450292706489563(s)
+Simulation Time 	 = 	 0.040312375873327255(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 0.00015323981642723083(s)
+Simulation Time 	 = 	 0.08402250334620476(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 0.00019936636090278625(s)
+Simulation Time 	 = 	 0.2648932486772537(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 0.0003020241856575012(s)
+Simulation Time 	 = 	 1.1015924476087093(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 2
+Initialisation Time 	 = 	 0.00034638866782188416(s)
+Simulation Time 	 = 	 1.5187009759247303(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 8.129701018333435e-05(s)
+Simulation Time 	 = 	 0.023120276629924774(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 8.532032370567322e-05(s)
+Simulation Time 	 = 	 0.022957604378461838(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 9.24430787563324e-05(s)
+Simulation Time 	 = 	 0.02392803132534027(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 0.00013004988431930542(s)
+Simulation Time 	 = 	 0.025707632303237915(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 9.869784116744995e-05(s)
+Simulation Time 	 = 	 0.025848597288131714(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 0.00010205432772636414(s)
+Simulation Time 	 = 	 0.024421919137239456(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 0.00011114776134490967(s)
+Simulation Time 	 = 	 0.02741745486855507(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 0.00012281537055969238(s)
+Simulation Time 	 = 	 0.03569570183753967(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 0.0001226179301738739(s)
+Simulation Time 	 = 	 0.03898238763213158(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 0.00014781206846237183(s)
+Simulation Time 	 = 	 0.0718463771045208(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 0.00019672513008117676(s)
+Simulation Time 	 = 	 0.16143713891506195(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 0.0003083646297454834(s)
+Simulation Time 	 = 	 0.5222343131899834(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 4
+Initialisation Time 	 = 	 0.00036247819662094116(s)
+Simulation Time 	 = 	 0.8224684558808804(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 8.398666977882385e-05(s)
+Simulation Time 	 = 	 0.02701595425605774(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 8.408352732658386e-05(s)
+Simulation Time 	 = 	 0.028882168233394623(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 9.278208017349243e-05(s)
+Simulation Time 	 = 	 0.03017566353082657(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.00010136142373085022(s)
+Simulation Time 	 = 	 0.02819104492664337(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.00010095164179801941(s)
+Simulation Time 	 = 	 0.030569083988666534(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.00010666623711585999(s)
+Simulation Time 	 = 	 0.031670600175857544(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.00011542066931724548(s)
+Simulation Time 	 = 	 0.03929995000362396(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.00012122839689254761(s)
+Simulation Time 	 = 	 0.03955904766917229(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.0001244470477104187(s)
+Simulation Time 	 = 	 0.044098641723394394(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.00014827772974967957(s)
+Simulation Time 	 = 	 0.06569059565663338(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.00019644200801849365(s)
+Simulation Time 	 = 	 0.1470676250755787(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.0003061145544052124(s)
+Simulation Time 	 = 	 0.41297921910881996(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 6
+Initialisation Time 	 = 	 0.00035212934017181396(s)
+Simulation Time 	 = 	 0.5808618776500225(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 8.422881364822388e-05(s)
+Simulation Time 	 = 	 0.030215412378311157(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 8.553639054298401e-05(s)
+Simulation Time 	 = 	 0.032971031963825226(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 9.107217192649841e-05(s)
+Simulation Time 	 = 	 0.030843190848827362(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.00010515376925468445(s)
+Simulation Time 	 = 	 0.030786830931901932(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.00011675804853439331(s)
+Simulation Time 	 = 	 0.03126028925180435(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.00010608881711959839(s)
+Simulation Time 	 = 	 0.03328487649559975(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.00012090429663658142(s)
+Simulation Time 	 = 	 0.039966948330402374(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.00012328475713729858(s)
+Simulation Time 	 = 	 0.0458960197865963(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.00012903660535812378(s)
+Simulation Time 	 = 	 0.05008420720696449(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.0001486651599407196(s)
+Simulation Time 	 = 	 0.06894564628601074(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.00019728392362594604(s)
+Simulation Time 	 = 	 0.13632020354270935(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.000309087336063385(s)
+Simulation Time 	 = 	 0.3506094217300415(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 8
+Initialisation Time 	 = 	 0.0003513023257255554(s)
+Simulation Time 	 = 	 0.48926015943288803(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 8.503720164299011e-05(s)
+Simulation Time 	 = 	 0.03360084816813469(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 8.376315236091614e-05(s)
+Simulation Time 	 = 	 0.03775196149945259(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 9.055808186531067e-05(s)
+Simulation Time 	 = 	 0.04063284397125244(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 0.00010773539543151855(s)
+Simulation Time 	 = 	 0.038069866597652435(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 9.554997086524963e-05(s)
+Simulation Time 	 = 	 0.03543097898364067(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 0.0001048743724822998(s)
+Simulation Time 	 = 	 0.03873855620622635(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 0.00011241436004638672(s)
+Simulation Time 	 = 	 0.04916539043188095(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 0.0001194104552268982(s)
+Simulation Time 	 = 	 0.05292878672480583(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 0.00012813881039619446(s)
+Simulation Time 	 = 	 0.05586598068475723(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 0.000462457537651062(s)
+Simulation Time 	 = 	 0.08264164626598358(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 0.00021515414118766785(s)
+Simulation Time 	 = 	 0.13954081386327744(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 0.0003107115626335144(s)
+Simulation Time 	 = 	 0.3225587159395218(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 10
+Initialisation Time 	 = 	 0.00035032257437705994(s)
+Simulation Time 	 = 	 0.4441729672253132(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 8.309260010719299e-05(s)
+Simulation Time 	 = 	 0.03711698576807976(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 8.265674114227295e-05(s)
+Simulation Time 	 = 	 0.03697368502616882(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 9.137019515037537e-05(s)
+Simulation Time 	 = 	 0.0387762226164341(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 9.943917393684387e-05(s)
+Simulation Time 	 = 	 0.037727177143096924(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 0.00010115653276443481(s)
+Simulation Time 	 = 	 0.04299682006239891(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 0.0001151449978351593(s)
+Simulation Time 	 = 	 0.04355465993285179(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 0.00011811032891273499(s)
+Simulation Time 	 = 	 0.05337794870138168(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 0.00011929497122764587(s)
+Simulation Time 	 = 	 0.05702440068125725(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 0.00012679025530815125(s)
+Simulation Time 	 = 	 0.058518875390291214(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 0.00015994906425476074(s)
+Simulation Time 	 = 	 0.08191211149096489(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 0.00020037218928337097(s)
+Simulation Time 	 = 	 0.14685102179646492(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 0.00030503049492836(s)
+Simulation Time 	 = 	 0.31404896453022957(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 12
+Initialisation Time 	 = 	 0.00036041438579559326(s)
+Simulation Time 	 = 	 0.4548349790275097(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 8.612498641014099e-05(s)
+Simulation Time 	 = 	 0.0413135327398777(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 8.660182356834412e-05(s)
+Simulation Time 	 = 	 0.04145018011331558(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.00010492280125617981(s)
+Simulation Time 	 = 	 0.051037438213825226(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 9.741261601448059e-05(s)
+Simulation Time 	 = 	 0.041391078382730484(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.00010392814874649048(s)
+Simulation Time 	 = 	 0.0420365110039711(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.00011081993579864502(s)
+Simulation Time 	 = 	 0.04762373864650726(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.00011465698480606079(s)
+Simulation Time 	 = 	 0.059488821774721146(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.00012153387069702148(s)
+Simulation Time 	 = 	 0.06376388669013977(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.00013089925050735474(s)
+Simulation Time 	 = 	 0.07301897183060646(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.00014785677194595337(s)
+Simulation Time 	 = 	 0.0985083058476448(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.00019669905304908752(s)
+Simulation Time 	 = 	 0.15395182371139526(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.0002995431423187256(s)
+Simulation Time 	 = 	 0.3245660252869129(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 14
+Initialisation Time 	 = 	 0.00035047903656959534(s)
+Simulation Time 	 = 	 0.4276951178908348(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 8.388236165046692e-05(s)
+Simulation Time 	 = 	 0.04499306157231331(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 8.361786603927612e-05(s)
+Simulation Time 	 = 	 0.04504457116127014(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 9.06921923160553e-05(s)
+Simulation Time 	 = 	 0.05037560313940048(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 9.97595489025116e-05(s)
+Simulation Time 	 = 	 0.04653816670179367(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 9.950622916221619e-05(s)
+Simulation Time 	 = 	 0.052300527691841125(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 0.0001050308346748352(s)
+Simulation Time 	 = 	 0.04976656660437584(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 0.00011331960558891296(s)
+Simulation Time 	 = 	 0.06632905825972557(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 0.00012155994772911072(s)
+Simulation Time 	 = 	 0.06400460004806519(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 0.00012411922216415405(s)
+Simulation Time 	 = 	 0.07933685556054115(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 0.00014701858162879944(s)
+Simulation Time 	 = 	 0.09668948873877525(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 0.00019700080156326294(s)
+Simulation Time 	 = 	 0.1611987240612507(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 0.00031333789229393005(s)
+Simulation Time 	 = 	 0.33860549330711365(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 16
+Initialisation Time 	 = 	 0.0003509633243083954(s)
+Simulation Time 	 = 	 0.44039810076355934(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 8.377805352210999e-05(s)
+Simulation Time 	 = 	 0.061469320207834244(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 8.594617247581482e-05(s)
+Simulation Time 	 = 	 0.04801027476787567(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 9.11131501197815e-05(s)
+Simulation Time 	 = 	 0.04952375590801239(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 9.508058428764343e-05(s)
+Simulation Time 	 = 	 0.04948319122195244(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 0.00010115280747413635(s)
+Simulation Time 	 = 	 0.06170477345585823(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 0.00010216981172561646(s)
+Simulation Time 	 = 	 0.054821908473968506(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 0.00011317804455757141(s)
+Simulation Time 	 = 	 0.06405957415699959(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 0.0001202411949634552(s)
+Simulation Time 	 = 	 0.08145963400602341(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 0.000124465674161911(s)
+Simulation Time 	 = 	 0.08202468231320381(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 0.0001507773995399475(s)
+Simulation Time 	 = 	 0.1188647635281086(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 0.00020009279251098633(s)
+Simulation Time 	 = 	 0.17138299345970154(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 0.0003022290766239166(s)
+Simulation Time 	 = 	 0.3276088014245033(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 18
+Initialisation Time 	 = 	 0.00035202503204345703(s)
+Simulation Time 	 = 	 0.4415445104241371(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 8.277595043182373e-05(s)
+Simulation Time 	 = 	 0.0595032274723053(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 9.379535913467407e-05(s)
+Simulation Time 	 = 	 0.05181749537587166(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 9.221211075782776e-05(s)
+Simulation Time 	 = 	 0.062495432794094086(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 9.545683860778809e-05(s)
+Simulation Time 	 = 	 0.05338708683848381(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 0.00010456517338752747(s)
+Simulation Time 	 = 	 0.07248741388320923(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 0.00010285899043083191(s)
+Simulation Time 	 = 	 0.06074265018105507(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 0.0001099519431591034(s)
+Simulation Time 	 = 	 0.07551491260528564(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 0.00011971965432167053(s)
+Simulation Time 	 = 	 0.10380813479423523(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 0.00013658404350280762(s)
+Simulation Time 	 = 	 0.07933717966079712(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 0.00014960765838623047(s)
+Simulation Time 	 = 	 0.1347937136888504(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 0.0002008303999900818(s)
+Simulation Time 	 = 	 0.21650493890047073(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 0.0002984963357448578(s)
+Simulation Time 	 = 	 0.3472289554774761(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 20
+Initialisation Time 	 = 	 0.0003502108156681061(s)
+Simulation Time 	 = 	 0.45142490416765213(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 8.222460746765137e-05(s)
+Simulation Time 	 = 	 0.05816159024834633(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 9.579956531524658e-05(s)
+Simulation Time 	 = 	 0.05598732456564903(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 8.950009942054749e-05(s)
+Simulation Time 	 = 	 0.05763590335845947(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.00010028854012489319(s)
+Simulation Time 	 = 	 0.05799978971481323(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.0001027323305606842(s)
+Simulation Time 	 = 	 0.059588368982076645(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.00010668113827705383(s)
+Simulation Time 	 = 	 0.0654120184481144(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.0001140981912612915(s)
+Simulation Time 	 = 	 0.08268235251307487(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.00012145936489105225(s)
+Simulation Time 	 = 	 0.09978682175278664(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.00012809410691261292(s)
+Simulation Time 	 = 	 0.09878668189048767(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.00014841929078102112(s)
+Simulation Time 	 = 	 0.12252624705433846(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.00019980967044830322(s)
+Simulation Time 	 = 	 0.1968739703297615(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.0003100074827671051(s)
+Simulation Time 	 = 	 0.3547992594540119(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 22
+Initialisation Time 	 = 	 0.0003502070903778076(s)
+Simulation Time 	 = 	 0.49157439172267914(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 8.260458707809448e-05(s)
+Simulation Time 	 = 	 0.07888906076550484(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 8.263066411018372e-05(s)
+Simulation Time 	 = 	 0.0676858238875866(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 9.839236736297607e-05(s)
+Simulation Time 	 = 	 0.06105184182524681(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 9.623169898986816e-05(s)
+Simulation Time 	 = 	 0.060314077883958817(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 0.00011014193296432495(s)
+Simulation Time 	 = 	 0.06989254802465439(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 0.00010737031698226929(s)
+Simulation Time 	 = 	 0.07424519956111908(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 0.00011172890663146973(s)
+Simulation Time 	 = 	 0.09388228878378868(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 0.00012182444334030151(s)
+Simulation Time 	 = 	 0.10225111618638039(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 0.0001384355127811432(s)
+Simulation Time 	 = 	 0.09964650496840477(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 0.0001746155321598053(s)
+Simulation Time 	 = 	 0.1381407156586647(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 0.00019710510969161987(s)
+Simulation Time 	 = 	 0.209729366004467(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 0.0003009811043739319(s)
+Simulation Time 	 = 	 0.3835044875741005(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 24
+Initialisation Time 	 = 	 0.0004303976893424988(s)
+Simulation Time 	 = 	 0.4848310053348541(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 8.172541856765747e-05(s)
+Simulation Time 	 = 	 0.06516718119382858(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 8.717179298400879e-05(s)
+Simulation Time 	 = 	 0.07210209593176842(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 9.372830390930176e-05(s)
+Simulation Time 	 = 	 0.0653461292386055(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 9.924918413162231e-05(s)
+Simulation Time 	 = 	 0.06599295884370804(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 9.689107537269592e-05(s)
+Simulation Time 	 = 	 0.07057221233844757(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 0.00010544806718826294(s)
+Simulation Time 	 = 	 0.07068191841244698(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 0.00011310353875160217(s)
+Simulation Time 	 = 	 0.07969430461525917(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 0.00012229755520820618(s)
+Simulation Time 	 = 	 0.11858176812529564(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 0.00012439116835594177(s)
+Simulation Time 	 = 	 0.12899334356188774(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 0.00014660507440567017(s)
+Simulation Time 	 = 	 0.17937497422099113(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 0.00019613653421401978(s)
+Simulation Time 	 = 	 0.2389545440673828(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 0.000301118940114975(s)
+Simulation Time 	 = 	 0.42579998821020126(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 26
+Initialisation Time 	 = 	 0.0007312484085559845(s)
+Simulation Time 	 = 	 0.5153640806674957(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 8.266419172286987e-05(s)
+Simulation Time 	 = 	 0.07848900929093361(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 2
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 9.337067604064941e-05(s)
+Simulation Time 	 = 	 0.08048436045646667(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 4
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 9.52892005443573e-05(s)
+Simulation Time 	 = 	 0.07716996595263481(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 8
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 0.00010048225522041321(s)
+Simulation Time 	 = 	 0.07171284034848213(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 10
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 9.952113032341003e-05(s)
+Simulation Time 	 = 	 0.07513144984841347(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 20
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 0.00010624900460243225(s)
+Simulation Time 	 = 	 0.0765576921403408(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 40
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 0.00011411309242248535(s)
+Simulation Time 	 = 	 0.08358392119407654(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 80
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 0.00012437254190444946(s)
+Simulation Time 	 = 	 0.13178683444857597(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 100
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 0.00012439116835594177(s)
+Simulation Time 	 = 	 0.14186900854110718(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 200
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 0.00014497339725494385(s)
+Simulation Time 	 = 	 0.19167334958910942(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 400
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 0.00020078197121620178(s)
+Simulation Time 	 = 	 0.2611113674938679(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 800
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 0.0003151446580886841(s)
+Simulation Time 	 = 	 0.427576906979084(s)
+
+**********************************
+
+
+
+**********************************
+
+Number of bodies 	 = 	 1000
+Threads used 	 	 = 	 28
+Initialisation Time 	 = 	 0.0003513731062412262(s)
+Simulation Time 	 = 	 0.5550924465060234(s)
+
+**********************************
+
+
