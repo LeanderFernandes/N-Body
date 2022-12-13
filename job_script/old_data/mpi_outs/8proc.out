@@ -1,0 +1,110 @@
+/tmp/slurmd/job10991967/slurm_script: line 17: STR: command not found
+8 processes 1 nodes 6 tasks per node
+
+**********************************
+
+Initialisation Time 		 = 	 0.00016975030303001404(s)
+Simulation Time 		 = 	 0.0062425993382930756(s)
+Number of bodies 		 = 	 100
+Number of nodes used 		 = 	 8
+Communication time 		 = 	 0.00150299072265625
+Computation time 		 = 	 0.004050016403198242
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00016280636191368103(s)
+Simulation Time 		 = 	 0.005345545709133148(s)
+Number of bodies 		 = 	 100
+Number of nodes used 		 = 	 8
+Communication time 		 = 	 0.0008769035339355469
+Computation time 		 = 	 0.004004001617431641
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00014938414096832275(s)
+Simulation Time 		 = 	 0.005380604416131973(s)
+Number of bodies 		 = 	 100
+Number of nodes used 		 = 	 8
+Communication time 		 = 	 0.0008759498596191406
+Computation time 		 = 	 0.004024028778076172
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00047286972403526306(s)
+Simulation Time 		 = 	 0.3736037388443947(s)
+Number of bodies 		 = 	 1000
+Number of nodes used 		 = 	 8
+Communication time 		 = 	 0.022177934646606445
+Computation time 		 = 	 0.3509500026702881
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00038506463170051575(s)
+Simulation Time 		 = 	 0.39356060698628426(s)
+Number of bodies 		 = 	 1000
+Number of nodes used 		 = 	 8
+Communication time 		 = 	 0.003942966461181641
+Computation time 		 = 	 0.3891761302947998
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0004108436405658722(s)
+Simulation Time 		 = 	 0.38193151727318764(s)
+Number of bodies 		 = 	 1000
+Number of nodes used 		 = 	 8
+Communication time 		 = 	 0.004961967468261719
+Computation time 		 = 	 0.37648606300354004
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0030743740499019623(s)
+Simulation Time 		 = 	 40.26190098747611(s)
+Number of bodies 		 = 	 10000
+Number of nodes used 		 = 	 8
+Communication time 		 = 	 4.891394138336182
+Computation time 		 = 	 35.36993193626404
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0030757859349250793(s)
+Simulation Time 		 = 	 38.24626789242029(s)
+Number of bodies 		 = 	 10000
+Number of nodes used 		 = 	 8
+Communication time 		 = 	 0.3456709384918213
+Computation time 		 = 	 37.90003800392151
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0030985362827777863(s)
+Simulation Time 		 = 	 38.15045119449496(s)
+Number of bodies 		 = 	 10000
+Number of nodes used 		 = 	 8
+Communication time 		 = 	 1.8340599536895752
+Computation time 		 = 	 36.315845012664795
+
+**********************************
+

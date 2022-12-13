@@ -1,0 +1,205 @@
+12 processes with varying N
+
+**********************************
+
+Initialisation Time 		 = 	 0.00010139867663383484(s)
+Simulation Time 		 = 	 0.001794464886188507(s)
+Number of bodies 		 = 	 1
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.0005578994750976562
+Computation time 		 = 	 0.0005300045013427734
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00011763349175453186(s)
+Simulation Time 		 = 	 0.0020501799881458282(s)
+Number of bodies 		 = 	 2
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.0009183883666992188
+Computation time 		 = 	 0.00012183189392089844
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0001298077404499054(s)
+Simulation Time 		 = 	 0.020043209195137024(s)
+Number of bodies 		 = 	 4
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.01890110969543457
+Computation time 		 = 	 0.00010895729064941406
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00013862177729606628(s)
+Simulation Time 		 = 	 0.0017727389931678772(s)
+Number of bodies 		 = 	 8
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.0005118846893310547
+Computation time 		 = 	 0.00013113021850585938
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0001470707356929779(s)
+Simulation Time 		 = 	 0.0018211081624031067(s)
+Number of bodies 		 = 	 10
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.0005609989166259766
+Computation time 		 = 	 0.0001239776611328125
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00013837963342666626(s)
+Simulation Time 		 = 	 0.001446109265089035(s)
+Number of bodies 		 = 	 20
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.0006048679351806641
+Computation time 		 = 	 0.00022912025451660156
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00014640390872955322(s)
+Simulation Time 		 = 	 0.019893113523721695(s)
+Number of bodies 		 = 	 40
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.018685102462768555
+Computation time 		 = 	 0.0006000995635986328
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00022091716527938843(s)
+Simulation Time 		 = 	 0.003814913332462311(s)
+Number of bodies 		 = 	 80
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.0008411407470703125
+Computation time 		 = 	 0.0018458366394042969
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00015599653124809265(s)
+Simulation Time 		 = 	 0.004953421652317047(s)
+Number of bodies 		 = 	 100
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.0008437633514404297
+Computation time 		 = 	 0.0030040740966796875
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00018453970551490784(s)
+Simulation Time 		 = 	 0.012940928339958191(s)
+Number of bodies 		 = 	 200
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.0015709400177001953
+Computation time 		 = 	 0.010279178619384766
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00024848058819770813(s)
+Simulation Time 		 = 	 0.049722399562597275(s)
+Number of bodies 		 = 	 400
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.01016998291015625
+Computation time 		 = 	 0.03845810890197754
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00038102641701698303(s)
+Simulation Time 		 = 	 0.166621383279562(s)
+Number of bodies 		 = 	 800
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.01406407356262207
+Computation time 		 = 	 0.15194296836853027
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.000428028404712677(s)
+Simulation Time 		 = 	 0.27831434085965157(s)
+Number of bodies 		 = 	 1000
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.03728294372558594
+Computation time 		 = 	 0.24038195610046387
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0007376484572887421(s)
+Simulation Time 		 = 	 1.1475242674350739(s)
+Number of bodies 		 = 	 2000
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.13185501098632812
+Computation time 		 = 	 1.014618158340454
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0013470500707626343(s)
+Simulation Time 		 = 	 4.123652629554272(s)
+Number of bodies 		 = 	 4000
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 0.02384495735168457
+Computation time 		 = 	 4.098705053329468
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.002403445541858673(s)
+Simulation Time 		 = 	 16.879897352308035(s)
+Number of bodies 		 = 	 8000
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 1.4437730312347412
+Computation time 		 = 	 15.43535590171814
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0037087947130203247(s)
+Simulation Time 		 = 	 25.537386652082205(s)
+Number of bodies 		 = 	 10000
+Number of nodes used 		 = 	 12
+Communication time 		 = 	 1.9006860256195068
+Computation time 		 = 	 23.63596796989441
+
+**********************************
+

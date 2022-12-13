@@ -1,0 +1,132 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"languages/anaconda/2020-3.8.5"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "languages/anaconda/2020-3.8.5"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 200
+Initialisation Time 	 = 	 0.0001513361930847168(s)
+Simulation Time 	 = 	 0.1160888746380806(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 400
+Initialisation Time 	 = 	 0.00018367543816566467(s)
+Simulation Time 	 = 	 0.478995468467474(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 800
+Initialisation Time 	 = 	 0.00028301775455474854(s)
+Simulation Time 	 = 	 1.865416955202818(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 1000
+Initialisation Time 	 = 	 0.00033653154969215393(s)
+Simulation Time 	 = 	 2.8923306837677956(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 200
+Initialisation Time 	 = 	 0.00013138726353645325(s)
+Simulation Time 	 = 	 0.11592782661318779(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 400
+Initialisation Time 	 = 	 0.00019634142518043518(s)
+Simulation Time 	 = 	 0.4636521302163601(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 800
+Initialisation Time 	 = 	 0.0002854838967323303(s)
+Simulation Time 	 = 	 1.8384738229215145(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 1000
+Initialisation Time 	 = 	 0.0003364086151123047(s)
+Simulation Time 	 = 	 2.8367304131388664(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 200
+Initialisation Time 	 = 	 0.0001317933201789856(s)
+Simulation Time 	 = 	 0.11758342757821083(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 400
+Initialisation Time 	 = 	 0.00018548965454101562(s)
+Simulation Time 	 = 	 0.49871183931827545(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 800
+Initialisation Time 	 = 	 0.0002860128879547119(s)
+Simulation Time 	 = 	 1.8999871872365475(s)
+
+-----------------------------------
+
+
+
+-----------------------------------
+
+Number of bodies 	 = 	 1000
+Initialisation Time 	 = 	 0.00033297762274742126(s)
+Simulation Time 	 = 	 2.9577339813113213(s)
+
+-----------------------------------
+
+

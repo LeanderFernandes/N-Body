@@ -1,0 +1,37 @@
+2 processes 1 nodes 1 tasks per node
+
+**********************************
+
+Initialisation Time 		 = 	 0.000402841717004776(s)
+Simulation Time 		 = 	 0.7290916331112385(s)
+Number of bodies 		 = 	 1000
+Number of nodes used 		 = 	 4
+Communication time 		 = 	 0.004694223403930664
+Computation time 		 = 	 0.7240188121795654
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.0004249662160873413(s)
+Simulation Time 		 = 	 0.7665978409349918(s)
+Number of bodies 		 = 	 1000
+Number of nodes used 		 = 	 4
+Communication time 		 = 	 0.07009601593017578
+Computation time 		 = 	 0.6961259841918945
+
+**********************************
+
+
+**********************************
+
+Initialisation Time 		 = 	 0.00041312724351882935(s)
+Simulation Time 		 = 	 0.778253585100174(s)
+Number of bodies 		 = 	 1000
+Number of nodes used 		 = 	 4
+Communication time 		 = 	 0.06423592567443848
+Computation time 		 = 	 0.7136390209197998
+
+**********************************
+

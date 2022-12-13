@@ -159,6 +159,7 @@ def main(steps,days,bodies):
         all_indexes = None
     
     rank_index = comm.scatter(all_indexes, root = 0)
+    mass_array = comm.bcast(mass_array, root=0)
 
     #time step through the simulation
     for i in range(steps):
