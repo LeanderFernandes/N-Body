@@ -1,8 +1,11 @@
-# N-Body Seriel, Threaded and Distributed
-This repo was used to create a safe testing environment for development of my n-body code. Being able to push and pull code allowed me to work on my personal and university computer.
-Since It allowed for easy code transfer between my personal development area and Bluecrystal without the need for SCP.
+# N-Body Serial, Shared and Distributed
+
 Folders are named after the specific method I was implementing:
 * Pythonic - seriel code for single core
-* mp - multi threaded code for a single node
+* mp - multithreaded code for a single node
 * distributed - distributive code for multiple nodes
+Testing was done in these folders
 
+The final codes being run on BC4 are in \bluecrystal with the job scripts used to run these files in job_script. Relative paths were used so the scripts are broken and will most probably cause an error. The files used for timings have some functions that are not called but used for making plots.
+
+The final submission report is in the form of a PDF with the accompanying videos in the root directory.
