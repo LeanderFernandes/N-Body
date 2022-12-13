@@ -124,8 +124,8 @@ def main(steps,days,bodies):
     TOTAL_BODIES = bodies
 
     #Choose whioch state to INITIALISE
-    # pos_array, vel_array, mass_array = initialise_solar_system()
-    pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
+    pos_array, vel_array, mass_array = initialise_solar_system()
+    # pos_array, vel_array, mass_array = initialise(TOTAL_BODIES)
     # pos_array, vel_array, mass_array = initialise_sun_earth()
     
     #Setup variables for the simulation
